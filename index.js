@@ -25,7 +25,7 @@ async function run() {
     const playerDB = client.db('playerDB');
     const playerCollections = playerDB.collection('players');
 
-    // get all players
+    // get all players data
     app.get('/players', async (req, res) => {
       const cursor = playerCollections.find({});
       const allValues = await cursor.toArray();
